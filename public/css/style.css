@@ -55,7 +55,7 @@ button:hover {
 }
 
 .go-back {
-    color: #2c2307;
+    color: #5c76ca;
 }
 
 textarea,
@@ -103,7 +103,7 @@ header,
 .site-row,
 .info-section,
 .form-heading {
-    background-color: #2c2307;
+    background-color: #5c76ca;
 }
 
 .login-page,
@@ -198,7 +198,7 @@ main {
 .edit-link {
     display: block;
     margin: -1.5% 0 2% 0;
-    color: #2c2307;
+    color: #5c76ca;
 }
 
 .comment-form {
@@ -244,7 +244,7 @@ main {
 
 .sign-in-link,
 .login-link {
-    color: #2c2307;
+    color: #5c76ca;
 }
 
 .form-heading h1,
