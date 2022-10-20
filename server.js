@@ -1,6 +1,5 @@
 const path = require('path');
 const express = require('express');
-const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 const exphbs = require('express-handlebars');
@@ -11,7 +10,7 @@ const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
-    secret: process.env.DB_SECRET,
+    secret: 'Super secret secret',
     cookie: {},
     resave: false,
     saveUninitialized: true,
@@ -30,11 +29,12 @@ app.set('view engine', 'handlebars');
 
 app.use(session(sess));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(require("./controllers/"))
 app.use(express.json());
 app.use(express.urlencoded({
     extended: true
 }));
-app.use(routes);
+
 
 sequelize.sync();
 
